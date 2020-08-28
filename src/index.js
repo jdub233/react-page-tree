@@ -11,7 +11,7 @@ export default class PageTree extends Component {
 
   render() {
     return (
-      <div style={{ height: 400 }}>
+      <div style={{ height: 800 }}>
         <SortableTree
           treeData={this.state.treeData}
           onChange={treeData => this.setState({ treeData })}
