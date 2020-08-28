@@ -6,21 +6,7 @@ export default class PageTree extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      treeData: [
-        { title: 'Home' },
-        { title: 'Admissions', children: [
-          { title: 'Undergraduate' },
-          { title: 'Graduate' }
-        ] },
-        { title: 'Academics', children: [
-          { title: 'Schools' },
-          { title: 'Programs' }
-        ] },
-        { title: 'Research' },
-        { title: 'Campus' },
-      ],
-    };
+    this.state = { treeData: props.pages };
   }
 
   render() {
