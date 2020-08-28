@@ -20,7 +20,8 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react-sortable-tree": "^2.8.0"
+    "react-sortable-tree": "^2.8.0",
+    "react-sortable-tree-theme-minimal": "0.0.14"
   },
   "peerDependencies": {
     "react": "16.x"
