@@ -24,7 +24,7 @@ function Demo() {
   return (
     <div>
       <h1>react-page-tree Demo</h1>
-      <button onClick={() => console.log(treeData) } >Show tree in console</button>
+      <button onClick={() => console.log(treeData) } >Show tree data in console</button>
       <PageTree 
         treeData={treeData}
         setTreeData={setTreeData}
