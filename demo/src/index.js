@@ -18,10 +18,23 @@ const demoPages = [
 ];
 
 class Demo extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = { treeData: demoPages };
+  }
+
+  changeTree = (treeData) => { this.setState({treeData}) }
+
   render() {
     return <div>
       <h1>react-page-tree Demo</h1>
-      <PageTree pages={demoPages} />
+      <button onClick={() => console.log(this.state.treeData) } >Show tree in console</button>
+      <PageTree 
+        treeData={this.state.treeData}
+        changeTree={this.changeTree}
+      />
     </div>
   }
 }

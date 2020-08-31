@@ -2,19 +2,14 @@ import React, { Component } from 'react';
 import SortableTree from 'react-sortable-tree';
 import MinimalTheme from 'react-sortable-tree-theme-minimal';
 
-export default class PageTree extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { treeData: props.pages };
-  }
+export default class PageTree extends Component {  
 
   render() {
     return (
       <div style={{ height: 800 }}>
         <SortableTree
-          treeData={this.state.treeData}
-          onChange={treeData => this.setState({ treeData })}
+          treeData={this.props.treeData}
+          onChange={this.props.changeTree}
           theme={MinimalTheme}
         />
       </div>
