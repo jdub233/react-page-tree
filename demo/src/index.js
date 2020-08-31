@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { useState } from 'react'
 import {render} from 'react-dom'
 
 import PageTree from '../../src'
@@ -17,26 +17,20 @@ const demoPages = [
   { title: 'Campus' },
 ];
 
-class Demo extends Component {
+function Demo() {
 
-  constructor(props) {
-    super(props);
+  const [treeData, setTreeData] = useState(demoPages);
 
-    this.state = { treeData: demoPages };
-  }
-
-  changeTree = (treeData) => { this.setState({treeData}) }
-
-  render() {
-    return <div>
+  return (
+    <div>
       <h1>react-page-tree Demo</h1>
-      <button onClick={() => console.log(this.state.treeData) } >Show tree in console</button>
+      <button onClick={() => console.log(treeData) } >Show tree in console</button>
       <PageTree 
-        treeData={this.state.treeData}
-        changeTree={this.changeTree}
+        treeData={treeData}
+        changeTree={setTreeData}
       />
     </div>
-  }
+  )
 }
 
 render(<Demo/>, document.querySelector('#demo'))
