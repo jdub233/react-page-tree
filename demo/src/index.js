@@ -27,7 +27,7 @@ function Demo() {
       <button onClick={() => console.log(treeData) } >Show tree in console</button>
       <PageTree 
         treeData={treeData}
-        changeTree={setTreeData}
+        setTreeData={setTreeData}
       />
     </div>
   )
